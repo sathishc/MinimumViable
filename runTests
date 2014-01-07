@@ -1,0 +1,1 @@
+./grailsw -Dgrails-env=integration test-app

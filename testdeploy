@@ -1,0 +1,3 @@
+rm /opt/bitnami/apache-tomcat/mvp/ROOT.war
+rm -r /opt/bitnami/apache-tomcat/mvp/ROOT
+cp target/mvp-0.1.war /opt/bitnami/apache-tomcat/mvp/ROOT.war
