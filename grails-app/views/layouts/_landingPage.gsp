@@ -3,15 +3,19 @@
     <sec:ifNotLoggedIn>
 
         %{--Landing Page Content before sign in--}%
-
-        <div class="span9">
-            <div class="well-small" style="background-color: #000000;border-color: #708090">
-                <g:render template="/landing/beforeSignupContent" />
+        <div id="beforeSignupLandingPage"
+             align="center"
+             data-bind="module:'pageController'"
+             ng-controller="PageControl">
+            <div class="span9">
+                <div class="well-small" style="background-color: #000000;border-color: #708090">
+                    <g:render template="/landing/beforeSignupContent" />
+                </div>
             </div>
-        </div>
-        <div class="span3">
-            <div class="well-small visible-desktop" style="background-color: #000000;height: 580px;border-color: #708090">
-                <g:render template="/landing/beforeSignupInputs" />
+            <div class="span3">
+                <div class="well-small visible-desktop" style="background-color: #000000;height: 580px;border-color: #708090">
+                    <g:render template="/landing/beforeSignupInputs" />
+                </div>
             </div>
         </div>
     </sec:ifNotLoggedIn>
@@ -19,14 +23,23 @@
 
     %{--Landing Page Content after sign in--}%
 
-        <div data-bind="module:{name:'pageController'}" xmlns="http://www.w3.org/1999/html">
-            <div align="center" class="well offset4 span4" data-bind="visible:profileLoaded()==false">
+        <div id="afterSignupLandingPage"
+            data-bind="module:{name:'pageController'}"
+            ng-controller="PageControl"
+            xmlns="http://www.w3.org/1999/html">
+            <div align="center"
+                data-bind="visible:profileLoaded()==false"
+                ng-show="!profileLoaded()"
+                class="well offset4 span4">
                 <div align="center">Please wait..</div>
                 <div align="center" class="progress progress-striped active">
                     <div class="bar" style="width: 100%;"></div>
                 </div>
             </div>
-            <div data-bind="visible:profileLoaded()==true" style="display: none">
+            <div
+                data-bind="css:{hidden:profileLoaded()==false}"
+                ng-class="{hidden:profileLoaded()==false}"
+                class="hidden">
 
                 <div
                     class="span8"

@@ -16,7 +16,6 @@
     </div>
 
     <div class="tab-pane fade in"
-         data-bind="module:{name:'userController'}"
          id="settingsOutput"
          style="height: 100%;">
         <g:render template="/pages/settingsPage" />

@@ -23,15 +23,17 @@
         <r:external uri="/css/datepicker.css" />
         <r:external uri="/css/timepicker.css" />
 
+        <r:external uri="/css/timepicker.css" />
+
 
 
 		<g:layoutHead/>
 
         <sec:ifLoggedIn>
-            <script data-main="js/main_loggedin" src="/js/thirdparty/require.js"></script>
+            <script data-main="js/main_loggedin_ng" src="/js/thirdparty/require.js"></script>
         </sec:ifLoggedIn>
         <sec:ifNotLoggedIn>
-            <script data-main="js/main_loggedout" src="/js/thirdparty/require.js"></script>
+            <script data-main="js/main_loggedout_ng" src="/js/thirdparty/require.js"></script>
         </sec:ifNotLoggedIn>
 	</head>
 	<body style="background-color: #2f4f4f;background-size: 100%">

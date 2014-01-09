@@ -1,5 +1,5 @@
 <div class="well" style="background: none;color: orange;border: 0;margin-bottom: 0;margin-top: 0;padding: 0;">
-    <h2 style="display: inline;font-size: 2em;"><a href="/" style="color: #f5deb3;">Minimum<span style="color: #f5f5f5;">Viable<span></a></h2>
+    <h2 style="display: inline;font-size: 2em;"><a href="/" style="color: #f5deb3;">Minimum<span style="color: #f5f5f5;">Viable</span></a></h2>
     <span style="display: none;">
         <a href="#home" data-target="#home" data-toggle="tab" style="display: none;"></a>
         <a href="#compatibilityPage" data-target="#compatibilityPage" data-toggle="tab" style="display: none;">Compatibility</a>
@@ -50,13 +50,18 @@
                   </ul>
               </sec:ifNotLoggedIn>
               <sec:ifLoggedIn>
-                  <a class="dropdown-toggle btn btn-link"
+                  <a class="dropdown-toggle btn btn-link hidden"
+                     id="headerControlId"
                      data-bind="module:{name:'userController'}"
+                     ng-controller="HeaderControl"
+                     ng-class="{hidden:!isVisible()}"
                      data-toggle="dropdown"
                      href="#" style="color: orange;padding-right: 0;">
-                      <span data-bind="text:fullName"></span>
+                      <span data-bind="text:fullName" ng-bind="fullName()"></span>
                       <img data-bind="attr:{src:profilePicture,title:fullName}"
+                           ng-src="{{profilePicture()}}" title="{{fullName()}}"
                            alt="" style="height: 18px;"/>
+
                   </a>
                   <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
                       <li><a href="/">Home</a></li>

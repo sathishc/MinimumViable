@@ -11,6 +11,8 @@ requirejs.config({
         "path": "thirdparty/ko/path.min",
         "domReady":"domReady",
         "util":"util",
+        "routes":"routes/routes",
+        "requests":"services/requests",
         "pageModel":"viewmodels/page",
         "pageController":"controllers/ko/pageController",
         "persona":"//login.persona.org/include"

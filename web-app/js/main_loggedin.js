@@ -14,6 +14,8 @@ requirejs.config({
         "common":"common",
         "userModel":"viewmodels/user",
         "pageModel":"viewmodels/page",
+        "routes":"routes/routes",
+        "requests":"services/requests",
         "userController":"controllers/ko/userController",
         "pageController":"controllers/ko/pageController",
         "persona":"//login.persona.org/include"

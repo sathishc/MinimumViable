@@ -1,4 +1,6 @@
-<div class="tabbable">
+<div class="tabbable"
+     data-bind="module:{name:'userController'}"
+     ng-controller="UserControl">
     <ul class="nav nav-pills well-small" style="background-color: #f5f5f5;margin-bottom: 0">
         <li class="active"><a href="#profileSettings" data-toggle="tab">Profile Settings</a></li>
         <li><a href="#notificationSettings" data-toggle="tab">Notification Settings</a></li>
@@ -14,21 +16,30 @@
                                     <div class="control-group">
                                         <label class="control-label" style="width: 300px;padding-right: 10px;" for="firstNameField">First Name</label>
                                         <div id="firstNameField" class="controls">
-                                            <input type="text" data-bind="value:firstName">
+                                            <input type="text"
+                                                   data-bind="value:firstName"
+                                                   ng-model="firstName">
                                         </div>
                                     </div>
 
                                     <div class="control-group">
                                         <label class="control-label" style="width: 300px;padding-right: 10px;" for="lastNameField">Last Name</label>
                                         <div id="lastNameField" class="controls">
-                                            <input type="text" data-bind="value:lastName">
+                                            <input
+                                                    type="text"
+                                                    ng-model="lastName"
+                                                    data-bind="value:lastName">
                                         </div>
                                     </div>
 
                                     <div class="control-group">
                                         <label class="control-label" style="width: 300px;padding-right: 10px;" for="genderField">Gender</label>
                                         <div id="genderField" class="controls">
-                                            <select data-bind="options:genderOptions,value:gender"></select>
+                                            <select
+                                                    data-bind="options:genderOptions,value:gender"
+                                                    ng-options="genderOption for genderOption in genderOptions"
+                                                    ng-model="gender"
+                                            ></select>
                                         </div>
                                     </div>
                                 </div>
@@ -49,10 +60,13 @@
                                 <div class="controls">
                                     <input class="btn btn-danger btn-small updateProfileSettingsButton"
                                            data-bind="visible:isProfileDirty"
+                                           ng-show="isProfileDirty"
                                            data-loading-text="Updating.."
                                            type="button"
                                            value="Update"/>
-                                    <label class="alert" data-bind="visible:isProfileDirty()==false">
+                                    <label class="alert"
+                                           data-bind="visible:isProfileDirty()==false"
+                                           ng-show="!isProfileDirty">
                                         Change a field to update profile.
                                     </label>
                                 </div>
@@ -71,7 +85,10 @@
                             <div class="control-group">
                                 <label class="control-label" style="width: 300px;padding-right: 10px;" for="notificationSelector1">Notifications on new features</label>
                                 <div class="controls">
-                                    <select id="notificationSelector1" name="featureNotification" data-bind="value:selectedFeatureNotificationSetting">
+                                    <select id="notificationSelector1"
+                                            data-bind="value:selectedFeatureNotificationSetting"
+                                            ng-model="selectedFeatureNotificationSetting"
+                                            name="featureNotification">
                                         <option value="0">No</option>
                                         <option value="1">Yes</option>
                                     </select>
@@ -82,6 +99,7 @@
                                 <div class="controls">
                                     <input class="btn btn-danger btn-small updateNotificationSettingsButton"
                                            data-bind="visible:isNotificationDirty"
+                                           ng-show="isNotificationDirty"
                                            data-loading-text="Updating.."
                                            type="button"
                                            value="Update"/>
