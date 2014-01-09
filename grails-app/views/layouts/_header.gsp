@@ -52,14 +52,12 @@
               <sec:ifLoggedIn>
                   <a class="dropdown-toggle btn btn-link hidden"
                      id="headerControlId"
-                     data-bind="module:{name:'userController'}"
                      ng-controller="HeaderControl"
                      ng-class="{hidden:!isVisible()}"
                      data-toggle="dropdown"
                      href="#" style="color: orange;padding-right: 0;">
-                      <span data-bind="text:fullName" ng-bind="fullName()"></span>
-                      <img data-bind="attr:{src:profilePicture,title:fullName}"
-                           ng-src="{{profilePicture()}}" title="{{fullName()}}"
+                      <span ng-bind="fullName()"></span>
+                      <img ng-src="{{profilePicture()}}" title="{{fullName()}}"
                            alt="" style="height: 18px;"/>
 
                   </a>

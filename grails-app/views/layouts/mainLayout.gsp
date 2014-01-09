@@ -30,10 +30,10 @@
 		<g:layoutHead/>
 
         <sec:ifLoggedIn>
-            <script data-main="js/main_loggedin_ng" src="/js/thirdparty/require.js"></script>
+            <script data-main="js/main_logged_in" src="/js/thirdparty/require.js"></script>
         </sec:ifLoggedIn>
         <sec:ifNotLoggedIn>
-            <script data-main="js/main_loggedout_ng" src="/js/thirdparty/require.js"></script>
+            <script data-main="js/main_logged_out" src="/js/thirdparty/require.js"></script>
         </sec:ifNotLoggedIn>
 	</head>
 	<body style="background-color: #2f4f4f;background-size: 100%">

@@ -1,10 +1,10 @@
 <div xmlns="http://www.w3.org/1999/html">
-    <div data-bind="visible:profileLoaded()==false" ng-hide="profileLoaded()">
+    <div ng-hide="profileLoaded()">
         <div align="center" class="progress progress-striped active">
             <div class="bar" style="width: 100%;"></div>
         </div>
     </div>
-    <div data-bind="css:{hidden:profileLoaded()==false}" class="hidden" ng-class="{hidden:profileLoaded()==false}">
+    <div class="hidden" ng-class="{hidden:profileLoaded()==false}">
         <div class="accordion" id="accordion2">
             <div class="accordion-group">
                 <div id="birthDetailsHeading" class="accordion-heading" style="background-color: #f5f5f5;">
@@ -14,30 +14,26 @@
                 </div>
                 <div id="pageInputs" class="accordion-body collapse in">
                     <div class="accordion-inner">
-                        <div class="tabbable" data-bind="module: {name:'pageController'}">
+                        <div class="tabbable">
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active">
                                     <a data-toggle="tab" href="#page1Inputs"
-                                       data-bind="click:function(){selectedPage('Page1');}"
                                        ng-click="selectedPage('Page1')">Page1</a>
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#page2Inputs"
-                                       data-bind="click:function(){selectedPage('Page2');}"
                                        ng-click="selectedPage('Page2')">Page2</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <div id="page1Inputs"
                                      class="alert alert-info"
-                                     data-bind="visible: isPage1Selected()"
                                      ng-show="isPage1Selected"
                                      style="margin-bottom: 0;background-color: transparent;border: 0;">
                                     Page1, Form and Controls
                                 </div>
                                 <div id="page2Inputs"
                                      class="alert alert-warning"
-                                     data-bind="visible: isPage1Selected()==false"
                                      ng-hide="isPage1Selected"
                                      style="margin-bottom: 0;background-color: transparent;border: 0;">
                                     Page2, Form and Controls

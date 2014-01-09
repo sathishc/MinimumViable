@@ -19,11 +19,14 @@
 	</head>
 	<body>
         <div class="well" style="margin-bottom: 50px;">
-                <div id="mainContainer" class="tab-content">
-                    <div id="privacyPage" class="tab-pane active" style="height: 605px;">
-                        <g:render template="/extras/privacy" />
-                    </div>
+            <div id="mainContainer" class="tab-content">
+                <div id="aboutPage" class="tab-pane active" style="height: 605px;">
+                    <g:render template="/extras/privacy" />
                 </div>
+                <div id="home" class="tab-pane">
+                    <g:render template="/layouts/landingPage" />
+                </div>
+            </div>
         </div>
 	</body>
 </html>

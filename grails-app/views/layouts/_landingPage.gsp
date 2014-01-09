@@ -5,7 +5,6 @@
         %{--Landing Page Content before sign in--}%
         <div id="beforeSignupLandingPage"
              align="center"
-             data-bind="module:'pageController'"
              ng-controller="PageControl">
             <div class="span9">
                 <div class="well-small" style="background-color: #000000;border-color: #708090">
@@ -24,11 +23,9 @@
     %{--Landing Page Content after sign in--}%
 
         <div id="afterSignupLandingPage"
-            data-bind="module:{name:'pageController'}"
             ng-controller="PageControl"
             xmlns="http://www.w3.org/1999/html">
             <div align="center"
-                data-bind="visible:profileLoaded()==false"
                 ng-show="!profileLoaded()"
                 class="well offset4 span4">
                 <div align="center">Please wait..</div>
@@ -36,11 +33,7 @@
                     <div class="bar" style="width: 100%;"></div>
                 </div>
             </div>
-            <div
-                data-bind="css:{hidden:profileLoaded()==false}"
-                ng-class="{hidden:profileLoaded()==false}"
-                class="hidden">
-
+            <div  ng-class="{hidden:profileLoaded()==false}" class="hidden">
                 <div
                     class="span8"
                     id="chartContainer"

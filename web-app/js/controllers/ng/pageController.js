@@ -102,7 +102,7 @@ define([
                 });
 
                 $('#logoutLink').on('click',function(){
-                    if($scope.isPersonaSession()){
+                    if($scope.isPersonaSession){
                         navigator.id.logout();
                     }else{
                         logoutUser();

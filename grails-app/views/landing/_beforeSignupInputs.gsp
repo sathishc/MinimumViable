@@ -11,7 +11,7 @@ position:absolute;
 </style>--}%
 
 <div align="center">
-    <div style="padding-bottom: 5px;" data-bind="css:{hidden:loggingIn()}" ng-hide="loggingIn">
+    <div style="padding-bottom: 5px;" ng-hide="loggingIn">
         <div class="well-small">
             <oauth:connect class="oauthButton btn btn-danger btn-large span12"
                            data-loading-text="Signing In. Please wait.."
@@ -34,7 +34,7 @@ position:absolute;
             </button>
         </div>
     </div>
-    <div align="center" data-bind="css:{hidden:loggingIn()==false}" class="hidden" ng-class="{hidden:!loggingIn}">
+    <div align="center" class="hidden" ng-class="{hidden:!loggingIn}">
         <div style="margin:0;color: #808080;margin-bottom: 10px;">Signing in...</div>
         <div class="progress progress-striped active">
             <div class="bar" style="width: 100%;"></div>
