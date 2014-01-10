@@ -8,7 +8,11 @@
         <div class="accordion" id="accordion2">
             <div class="accordion-group">
                 <div id="birthDetailsHeading" class="accordion-heading" style="background-color: #f5f5f5;">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#pageInputs">
+                    <a class="accordion-toggle"
+                       data-toggle="collapse"
+                       data-parent="#accordion2"
+                       ng-click="selectPage('/page1')"
+                       href="#pageInputs">
                         Home
                     </a>
                 </div>
@@ -17,26 +21,28 @@
                         <div class="tabbable">
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active">
-                                    <a data-toggle="tab" href="#page1Inputs"
-                                       ng-click="selectedPage('Page1')">Page1</a>
+                                    <a data-toggle="tab"
+                                       href="#page1Inputs"
+                                       ng-click="selectPage('/page1')">Page1</a>
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#page2Inputs"
-                                       ng-click="selectedPage('Page2')">Page2</a>
+                                       ng-click="selectPage('/page2')">Page2</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <div id="page1Inputs"
-                                     class="alert alert-info"
-                                     ng-show="isPage1Selected"
-                                     style="margin-bottom: 0;background-color: transparent;border: 0;">
-                                    Page1, Form and Controls
+                                     class="tab-pane active">
+                                    <div class="alert alert-info" style="margin-bottom: 0;background-color: transparent;border: 0;">
+                                        Page1, Form and Controls
+                                    </div>
                                 </div>
                                 <div id="page2Inputs"
-                                     class="alert alert-warning"
-                                     ng-hide="isPage1Selected"
-                                     style="margin-bottom: 0;background-color: transparent;border: 0;">
-                                    Page2, Form and Controls
+                                     class="tab-pane">
+                                    <div class="alert alert-warning" style="margin-bottom: 0;background-color: transparent;border: 0;">
+                                        Page2, Form and Controls
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -46,7 +52,11 @@
             </div>
             <div class="accordion-group">
                 <div id="compatibilityDetailsHeading" class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#toolsPageInputs">
+                    <a class="accordion-toggle"
+                       data-toggle="collapse"
+                       data-parent="#accordion2"
+                       ng-click="selectPage('/tools')"
+                       href="#toolsPageInputs">
                         Tools
                     </a>
                 </div>
@@ -74,7 +84,11 @@
 
             <div class="accordion-group">
                 <div id="settingsDetailsHeading" class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSettings">
+                    <a class="accordion-toggle"
+                       data-toggle="collapse"
+                       data-parent="#accordion2"
+                       ng-click="selectPage('/settings')"
+                       href="#collapseSettings">
                         Settings
                     </a>
                 </div>

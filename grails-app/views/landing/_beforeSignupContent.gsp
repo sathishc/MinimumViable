@@ -7,7 +7,7 @@
 <div class="row-fluid" style="background-color: black;">
     <div class="span12">
         <div class="well" style="background-color: black;color: #f5f5f5;border: 0;padding-bottom: 0;margin-bottom: 0;">
-            <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;">
+            <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;text-align: left">
                 A Single Page Web-App. Already designed for you.
             </h2>
             <div style="color: #a9a9a9;text-align:justify;text-justify:inter-word;">
@@ -27,7 +27,7 @@
     <div class="row-fluid" style="background-color: black;">
         <div class="span12">
             <div class="well" style="background-color: black;color: #f5f5f5;border: 0;padding-bottom: 0;margin-bottom: 0;">
-                <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;">
+                <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;text-align: left">
                     Validate your Idea.
                 </h2>
 
@@ -53,7 +53,7 @@
 
         <div class="span10">
             <div class="well" style="background-color: black;color: #f5f5f5;border: 0;">
-                <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;">
+                <h2 style="color: #f5deb3;font-size: 17.5px;line-height:18px;padding: 0;text-align: left">
                    Build to Measure.   Build to Learn.
                 </h2>
                 <div style="color: #a9a9a9;text-align:justify;text-justify:inter-word;">

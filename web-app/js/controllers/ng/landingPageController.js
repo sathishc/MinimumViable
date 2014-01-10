@@ -9,37 +9,14 @@ define([
         var pageController =  angular.module('pageController', []);
 
 
-        pageController.controller('PageControl',
-            ['$scope','$location','user',
-                function ($scope,$location,userService) {
+        pageController.controller('LandingPageControl',
+            ['$scope',
+                function ($scope) {
 
 
             $scope.url = "home";
             $scope.loggingIn = false;
             $scope.loggingInStyle = "{display:none;}";
-            $scope.selectedPage = 'Page1';
-
-
-            $scope.selectPage = function(value){
-                $scope.selectedPage = value;
-            };
-
-
-
-            $scope.isPersonaSession = false;
-
-
-            $scope.profileLoaded = function(){
-                return userService.isUserDataLoaded();
-            };
-
-            $scope.$watch('selectedPage',function(newValue, OldValue){
-                if(newValue != OldValue){
-                    $location.path(newValue);
-                }
-
-            });
-
 
             $scope.bindEvents = function(useremail){
                 var loggedInUser = null;
@@ -95,25 +72,11 @@ define([
                     }else{
                         navigator.id.request({siteName: 'Minimum Viable', siteLogo: '/img/Om.png',termsOfService: '/terms', privacyPolicy: '/privacy'});
                     }
-
-
-                });
-
-                $('#logoutLink').on('click',function(){
-                    if($scope.isPersonaSession){
-                        navigator.id.logout();
-                    }else{
-                        logoutUser();
-                    }
-                    return false;
-
                 });
 
 
 
-                $.ajaxSetup({statusCode:{401:function(){
-                    $('#sessionTimeoutDialog').modal('show');
-                }}});
+
 
                 $('.popupHelpCloseButton').on('click',function(){
                     util.hideHelpPopup();
@@ -125,36 +88,8 @@ define([
                 $('.oauthButton').on('click',function(){
                     disableSignupButton();
                 });
-
-                $('#pageInputs').on('shown', function () {
-                    $('.accordion-heading').css('background-color','#ffffff');
-                    $('#birthDetailsHeading').css('background-color','#f5f5f5');
-
-                });
-
-                $('#toolsPageInputs').on('shown', function () {
-                    $('.accordion-heading').css('background-color','#ffffff');
-                    $('#compatibilityDetailsHeading').css('background-color','#f5f5f5');
-
-
-                });
-
-                $('#collapseSettings').on('shown', function () {
-                    $('.accordion-heading').css('background-color','#ffffff');
-                    $('#settingsDetailsHeading').css('background-color','#f5f5f5');
-
-                });
-
             };
 
-
-
-
-            function logoutUser(){
-
-                window.location = '/logout/';
-
-            }
 
             function disableSignupButton(){
                 $('.oauthButton').button('loading');
@@ -163,8 +98,6 @@ define([
                 $scope.$apply();
                 return true;
             }
-
-
 
 
             $scope.bindEvents();

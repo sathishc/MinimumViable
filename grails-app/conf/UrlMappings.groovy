@@ -12,10 +12,12 @@ class UrlMappings {
             action = "home"
             alternativeHome = {session.source == 'alt'}
         }
-        "/test"{
-            controller = "siteMap"
-            action = "test"
-        }
+
+
+        "/page1"(view: "/pages/page1")
+        "/tools"(view: "/pages/tools")
+        "/page2"(view: "/pages/page2")
+        "/settings"(view: "/pages/settings")
 
 
 
@@ -27,7 +29,6 @@ class UrlMappings {
 
         "/terms"(view:"/termsIndex")
         "/privacy"(view:"/privacyIndex")
-
         "/about"(view:"/aboutIndex")
 
 

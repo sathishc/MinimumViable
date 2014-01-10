@@ -9,9 +9,7 @@ requirejs.config({
         "bootstrap": "thirdparty/bootstrap.min",
         "domReady":"domReady",
         "util":"util",
-        "routes":"routes/ng/routes",
-        "requests":"services/ng/requests",
-        "pageController":"controllers/ng/pageController",
+        "pageController":"controllers/ng/landingPageController",
         "persona":"//login.persona.org/include"
     },
     "shim":{
@@ -38,8 +36,6 @@ require([
     'jquery',
     'angular',
     'pageController',
-    'routes',
-    'requests',
     'util',
     'bootstrap',
     'persona'
@@ -51,11 +47,9 @@ require([
 
 
 
-            var app = angular.module('mvApp',['pageController','routes','requests']);
+            var app = angular.module('mvApp',['pageController']);
 
             angular.bootstrap(document, ['mvApp']);
-
-
 
             $.ajaxSetup({statusCode:{401:function(){
                 $('#sessionTimeoutDialog').modal('show');

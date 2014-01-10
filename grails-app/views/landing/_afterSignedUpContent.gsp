@@ -1,3 +1,4 @@
+%{--
 <div class="tab-content" style="height: 100%;">
     <div class="tab-pane active fade in"
          id="page1Content"
@@ -20,4 +21,6 @@
          style="height: 100%;">
         <g:render template="/pages/settingsPage" />
     </div>
-</div>
+</div>--}%
+
+<ng-view></ng-view>

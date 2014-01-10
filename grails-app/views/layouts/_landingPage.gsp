@@ -5,7 +5,7 @@
         %{--Landing Page Content before sign in--}%
         <div id="beforeSignupLandingPage"
              align="center"
-             ng-controller="PageControl">
+             ng-controller="LandingPageControl">
             <div class="span9">
                 <div class="well-small" style="background-color: #000000;border-color: #708090">
                     <g:render template="/landing/beforeSignupContent" />

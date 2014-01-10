@@ -9,8 +9,6 @@ requirejs.config({
         "bootstrap": "thirdparty/bootstrap.min",
         "domReady":"domReady",
         "util":"util",
-        "routes":"routes/ng/routes",
-        "requests":"services/ng/requests",
         "pageController":"controllers/ng/pageController",
         "userController":"controllers/ng/userController",
         "headerController":"controllers/ng/headerController",
@@ -25,6 +23,7 @@ requirejs.config({
             exports: 'angular'
         },
         'angular-route': {
+            deps:['angular'],
             exports: 'angular'
         },
         'angular-loader': {
@@ -45,8 +44,7 @@ require([
     'userController',
     'headerController',
     'userService',
-    'routes',
-    'requests',
+    'angular-route',
     'bootstrap',
     'persona'
 ],function($,angular,util,pageController,headerController){
@@ -57,10 +55,34 @@ require([
 
 
 
-            var app = angular.module('mvApp',['pageController','userController','headerController','userService','routes','requests']);
+            var app = angular.module('mvApp',
+                ['pageController','userController','headerController','userService','ngRoute']);
 
 
+            app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 
+                $routeProvider.
+                    when('/page1', {
+                        templateUrl: '/page1',
+                        controller: 'PageControl'
+                    }).
+                    when('/page2', {
+                        templateUrl: '/page2',
+                        controller: 'PageControl'
+                    }).
+                    when('/settings', {
+                        templateUrl: '/settings',
+                        controller: 'PageControl'
+                    }).
+                    when('/tools', {
+                        templateUrl: '/tools',
+                        controller: 'PageControl'
+                    }).
+                    when('/', {
+                        templateUrl: '/page1',
+                        controller: 'PageControl'
+                    });
+            }]);
 
 
             $.ajaxSetup({statusCode:{401:function(){
@@ -73,8 +95,13 @@ require([
 
             util.popHelpDialog();
 
+            app.run(['user',function(userService){
+                userService.getServerUserData();
+            }]);
 
             angular.bootstrap(document, ['mvApp']);
+
+
 
         });
     });
