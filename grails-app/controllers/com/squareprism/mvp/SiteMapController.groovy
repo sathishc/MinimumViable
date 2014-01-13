@@ -1,4 +1,4 @@
-package com.squareprism.astro
+package com.squareprism.mvp
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 import org.springframework.web.servlet.ModelAndView
 import grails.util.Environment

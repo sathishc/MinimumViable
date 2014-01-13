@@ -1,4 +1,4 @@
-package com.squareprism.astro
+package com.squareprism.mvp
 
 import groovyx.net.http.AsyncHTTPBuilder
 

@@ -1,4 +1,4 @@
-package com.squareprism.astro;
+package com.squareprism.mvp;
 import org.scribe.builder.api.DefaultApi20;
 import org.scribe.exceptions.OAuthException;
 import org.scribe.extractors.AccessTokenExtractor;

@@ -97,9 +97,9 @@ log4j = {
 }
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.squareprism.astro.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.squareprism.astro.UserRole'
-grails.plugins.springsecurity.authority.className = 'com.squareprism.astro.Role'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.squareprism.mvp.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.squareprism.mvp.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.squareprism.mvp.Role'
 grails.plugins.springsecurity.dao.reflectionSaltSourceProperty = 'username'
 grails.plugins.springsecurity.password.encodeHashAsBase64 = true
 
@@ -112,7 +112,7 @@ grails.plugins.springsecurity.rememberMe.useSecureCookie = true
 oauth {
     providers {
         google {
-            api = com.squareprism.astro.Google2Api
+            api = com.squareprism.mvp.Google2Api
             key = '289402523855-ghkfdfk855rbv9tvbgu3nbcuud64k50v.apps.googleusercontent.com'
             secret = 'TH8JuRv36C3X0ZAs2jis7wHZ'
             successUri = "${grails.serverURL}/socialLogin/google"
