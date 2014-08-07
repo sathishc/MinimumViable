@@ -1,4 +1,4 @@
-<h2 class="well-small" style="color: #da4f49;">
+<h2 class="well-small" style="color: #808080;">
     The Fastest Way to Build a Minimum Viable Product!!
 </h2>
 
@@ -9,7 +9,7 @@
             <div style="font-size:16px;color: #a9a9a9;text-align:justify;text-justify:inter-word;">
                 <ul>
                     <li class="well-small"> An Open Source Single Page Web-App. Already designed for you.</li>
-                    <li class="well-small"> Opinionated but familiar Frameworks - Twitter Bootstrap and Angular Front end. Grails backend </li>
+                    <li class="well-small"> Opinionated but familiar Frameworks - Twitter Bootstrap / AngularJS / Grails </li>
                     <li class="well-small"> OAuth based Authentication built-in for Facebook, Google and Persona</li>
                     <li class="well-small"> Page history management and routing </li>
                     <li class="well-small"> Ready-made backend domain models</li>
