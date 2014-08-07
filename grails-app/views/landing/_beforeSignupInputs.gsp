@@ -11,7 +11,7 @@ position:absolute;
 </style>--}%
 
 <div align="center">
-    <div style="padding-bottom: 5px;" ng-hide="loggingIn">
+    <div style="padding-bottom: 5px;margin-top: 30px;" ng-hide="loggingIn">
         <div class="well-small">
             <oauth:connect class="oauthButton btn btn-danger btn-large span12"
                            data-loading-text="Signing In. Please wait.."
