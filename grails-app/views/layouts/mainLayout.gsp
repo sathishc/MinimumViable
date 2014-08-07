@@ -36,7 +36,7 @@
             <script data-main="js/main_logged_out" src="/js/thirdparty/require.js"></script>
         </sec:ifNotLoggedIn>
 	</head>
-	<body style="background-color: #2f4f4f;background-size: 100%">
+	<body style="background-size: 100%">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];

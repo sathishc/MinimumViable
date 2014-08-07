@@ -6,7 +6,7 @@ define(['angular'],function(angular){
     userService.factory('user',['$rootScope','$http','$q',function($rootScope,$http,$q){
         var userDataLoaded = false;
 
-        var userData = $q.defer();;
+        var userData = $q.defer();
         return{
             getServerUserData:function(){
 

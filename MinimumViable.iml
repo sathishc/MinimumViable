@@ -96,6 +96,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="MinimumViable-grailsPlugins" />
+    <orderEntry type="library" name="grails-2.2.2" level="application" />
   </component>
 </module>
 

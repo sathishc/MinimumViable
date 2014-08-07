@@ -97,9 +97,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.2.2" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="grails-2.2.2" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (MinimumViable-grailsPlugins)">
         <CLASSES>
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/yui-minify-resources-0.1.5/lib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/mysql-connectorj-5.1.22.1/lib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/joda-time-1.4/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.2.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/cglib/cglib-nodep/jars/cglib-nodep-2.1_3.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.json/json/jars/json-20080701.jar!/" />
@@ -142,9 +146,6 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.eclipse.jdt.core.compiler/ecj/jars/ecj-3.7.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
-          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/yui-minify-resources-0.1.5/lib" />
-          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/mysql-connectorj-5.1.22.1/lib" />
-          <root url="file://$USER_HOME$/.grails/2.2.2/projects/mvp/plugins/joda-time-1.4/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

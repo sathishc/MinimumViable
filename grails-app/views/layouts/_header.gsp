@@ -1,5 +1,5 @@
 <div class="well" style="background: none;color: orange;border: 0;margin-bottom: 0;margin-top: 0;padding: 0;">
-    <h2 style="display: inline;font-size: 2em;"><a href="/" style="color: #f5deb3;">Minimum<span style="color: #f5f5f5;">Viable</span></a></h2>
+    <h2 style="display: inline;font-size: 2em;"><a href="/" style="color: #f5deb3;">Minimum<span style="color: f5deb3;">Viable</span></a></h2>
     <span style="display: none;">
         <a href="#home" data-target="#home" data-toggle="tab" style="display: none;"></a>
         <a href="#compatibilityPage" data-target="#compatibilityPage" data-toggle="tab" style="display: none;">Compatibility</a>
@@ -20,7 +20,7 @@
             <span class="dropdown">
               <sec:ifNotLoggedIn>
                   <a class="dropdown-toggle btn btn-link" data-toggle="dropdown" href="#" style="padding-right: 0;">
-                      <span style="color:#f5f5f5;">
+                      <span style="color:f5deb3;">
                           MVP Demo <i class="icon-lock"></i>
                       </span>
                   </a>

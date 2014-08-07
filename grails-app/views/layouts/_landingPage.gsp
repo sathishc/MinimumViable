@@ -7,12 +7,12 @@
              align="center"
              ng-controller="LandingPageControl">
             <div class="span9">
-                <div class="well-small" style="background-color: #000000;height: 580px;border-color: #708090">
+                <div class="well-small" style="background-color: #f5f5f5;height: 580px;border-color: #708090">
                     <g:render template="/landing/beforeSignupContent" />
                 </div>
             </div>
             <div class="span3">
-                <div class="well-small visible-desktop" style="background-color: #000000;height: 580px;border-color: #708090">
+                <div class="well-small visible-desktop" style="background-color: #f5f5f5;height: 580px;border-color: #708090">
                     <g:render template="/landing/beforeSignupInputs" />
                 </div>
             </div>

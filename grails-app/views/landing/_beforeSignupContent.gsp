@@ -2,9 +2,9 @@
     The Fastest Way to Build a Minimum Viable Product!!
 </h2>
 
-<div class="row-fluid" style="background-color: black;">
+<div class="row-fluid" style="background-color: #f5f5f5;">
     <div class="span12">
-        <div class="well-large" style="background-color: black;color: #f5f5f5;border: 0;padding-bottom: 0;margin-bottom: 0;">
+        <div class="well-large" style="background-color: #f5f5f5;color: #f5f5f5;border: 0;padding-bottom: 0;margin-bottom: 0;">
 
             <div style="font-size:16px;color: #a9a9a9;text-align:justify;text-justify:inter-word;">
                 <ul>
